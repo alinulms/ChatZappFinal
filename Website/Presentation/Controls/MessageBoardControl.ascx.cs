@@ -5,6 +5,7 @@ using System.Web.UI.WebControls;
 
 namespace Website.Presentation.Controls
 {
+  using System.Configuration;
   using System.Web.Script.Serialization;
   using Model;
 
@@ -47,9 +48,6 @@ namespace Website.Presentation.Controls
     {
       get
       {
-        if (Session["Radius"] != null && !string.IsNullOrEmpty(Session["Radius"].ToString()))
-          return Int32.Parse(Session["Radius"].ToString().Replace('.', ','));
-
         HttpCookie httpCookie = Request.Cookies[Constants.CookieName];
         if (httpCookie != null)
         {
@@ -62,7 +60,23 @@ namespace Website.Presentation.Controls
       }
     }
 
-    public string UserName
+    //public string UserName
+    //{
+    //  get
+    //  {
+    //    HttpCookie httpCookie = Request.Cookies[Constants.CookieName];
+    //    if (httpCookie != null)
+    //    {
+    //      var userCookie = httpCookie.Value;
+    //      FacebookUser fbUser = new JavaScriptSerializer().Deserialize<FacebookUser>(userCookie);
+    //      return fbUser.UserName;
+    //    }
+    //    Response.Redirect("/");
+    //    return string.Empty;
+    //  }
+    //}
+
+    public FacebookUser FacebookUserFromCookie
     {
       get
       {
@@ -71,16 +85,16 @@ namespace Website.Presentation.Controls
         {
           var userCookie = httpCookie.Value;
           FacebookUser fbUser = new JavaScriptSerializer().Deserialize<FacebookUser>(userCookie);
-          return fbUser.UserName;
+          return fbUser;
         }
         Response.Redirect("/");
-        return string.Empty;
+        return null;
       }
     }
 
     protected void ShowDiscussion(object sender, EventArgs e)
     {
-      Response.Redirect(string.Concat("/DiscussionBoard.aspx?gid=", ((LinkButton)sender).CommandArgument));
+      Response.Redirect(string.Concat(ConfigurationManager.AppSettings["DiscussionBoardPage"], "?gid=", ((LinkButton)sender).CommandArgument));
     }
 
     protected string GetMessagesInDiscussion(string groupId)

@@ -46,11 +46,24 @@ namespace Website.Presentation
 
     protected void SaveNameAndRadius(object sender, EventArgs e)
     {
-      Session["UserName"] = TxtName.Text;
-      Session["Radius"] = TxtRadius.Text;
+      FacebookUser fbUser = new FacebookUser
+      {
+        ChattingDistance = int.Parse(TxtRadius.Text),
+        Email = string.Empty,
+        Id = string.Empty,
+        Name = TxtName.Text,
+        PictureUrl = "/Styles/Images/anonymous.jpg",
+        UserName = TxtName.Text
+      };
+
+      
+
+      //Session["UserName"] = TxtName.Text;
+      //Session["Radius"] = TxtRadius.Text;
       Session["Latitude"] = Latitude.Value;
       Session["Longitude"] = Longitude.Value;
-      
+
+      Response.Cookies.Add(new HttpCookie(Constants.CookieName) { Value = new JavaScriptSerializer().Serialize(fbUser), Expires = DateTime.MinValue });
       Response.Redirect(ConfigurationManager.AppSettings["MessageBoardPage"]);
     }
 

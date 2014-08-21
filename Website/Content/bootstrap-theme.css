@@ -364,6 +364,12 @@
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
           box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
 }
+
+.list-group.item img:first-of-type {
+    width: 50px;
+    height: 50px;
+}
+
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
