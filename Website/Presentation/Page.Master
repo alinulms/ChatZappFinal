@@ -1,5 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Page.master.cs" Inherits="Website.Presentation.Page" %>
 
+<%@ Register Src="~/Presentation/Controls/SearchControl.ascx" TagPrefix="uc1" TagName="SearchControl" %>
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -24,6 +27,10 @@
 <body>
    <form id="form1" runat="server">
         <div>
+            <asp:ContentPlaceHolder ID="TopPlaceholder" runat="server">
+                <uc1:SearchControl runat="server" id="SearchControl" />
+            </asp:ContentPlaceHolder>
+
             <asp:ContentPlaceHolder ID="ContentPlaceholder" runat="server">
             </asp:ContentPlaceHolder>
 
