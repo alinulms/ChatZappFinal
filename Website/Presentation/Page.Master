@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Page.master.cs" Inherits="Website.Presentation.Page" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <title>ChatZapp</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script src="../Scripts/jquery-2.1.1.js"></script>
+    <script src="../Scripts/jquery.signalR-2.1.1.js"></script>
+    <script src="../Scripts/Custom/BrowserDetect.js"></script>
+    <script src="../Scripts/Custom/EventHandler.js"></script>
+    <link href="../Styles/Main.css" rel="stylesheet" />
+    <link href="../Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Styles/standard.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+   <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceholder" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <asp:ContentPlaceHolder runat="server" ID="NavigationPlaceholder">
+            </asp:ContentPlaceHolder>
+
+            <asp:ContentPlaceHolder runat="server" ID="HiddenPlaceholder">
+                <asp:HiddenField runat="server" ID="Latitude" ClientIDMode="Static" />
+                <asp:HiddenField runat="server" ID="Longitude" ClientIDMode="Static" />
+                <asp:HiddenField runat="server" ID="UserName" ClientIDMode="Static" />
+                <asp:HiddenField runat="server" ID="GroupId" ClientIDMode="Static" />
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <%--<script src="http://code.google.com/apis/gears/gears_init.js" type="text/javascript"></script>
+    <script src="http://geo-location-javascript.googlecode.com/svn/trunk/js/geo-min.js" type="text/javascript" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>   --%>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/Custom/GeoLocation.js"></script>
+    <script src="/signalr/hubs"></script>
+</body>
+</html>
