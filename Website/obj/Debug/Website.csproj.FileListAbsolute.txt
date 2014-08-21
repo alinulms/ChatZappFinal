@@ -30,6 +30,5 @@ C:\Users\Alin\Documents\GitHub\Chatzapp Final\Chatzapp\Website\obj\Debug\Website
 C:\Users\Alin\Documents\GitHub\Chatzapp\ChatZappFinal\Website\bin\Website.dll.config
 C:\Users\Alin\Documents\GitHub\Chatzapp\ChatZappFinal\Website\bin\Website.dll
 C:\Users\Alin\Documents\GitHub\Chatzapp\ChatZappFinal\Website\bin\Website.pdb
-C:\Users\Alin\Documents\GitHub\Chatzapp\ChatZappFinal\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
 C:\Users\Alin\Documents\GitHub\Chatzapp\ChatZappFinal\Website\obj\Debug\Website.dll
 C:\Users\Alin\Documents\GitHub\Chatzapp\ChatZappFinal\Website\obj\Debug\Website.pdb
