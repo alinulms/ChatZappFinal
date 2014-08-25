@@ -22,7 +22,7 @@
                     <div class="caption">
                         <h4>Use Facebook to Login</h4>
                         <asp:Button ID="btnLogin" runat="server" Text="Login with FaceBook" OnClick="Login" />
-                        <h4>What is the scan radius? (km)</h4>
+                        <h4>What is the scan radius? (km)(default 10)</h4>
                         <asp:TextBox runat="server" ID="TxtRadiusFacebook" TextMode="Number" min="1" />
                     </div>
                 </div>

@@ -37,7 +37,7 @@ namespace Website.Presentation
       string data = FaceBookConnect.Fetch(code, "me");
       var faceBookUser = new JavaScriptSerializer().Deserialize<FacebookUser>(data);
       faceBookUser.PictureUrl = string.Format("https://graph.facebook.com/{0}/picture", faceBookUser.Id);
-      faceBookUser.ChattingDistance = 10;
+      faceBookUser.ChattingDistance = string.IsNullOrEmpty(TxtRadiusFacebook.Text) ? 10 : int.Parse(TxtRadiusFacebook.Text);
 
       btnLogin.Enabled = false;
       Response.Cookies.Add(new HttpCookie(Constants.CookieName) { Value = new JavaScriptSerializer().Serialize(faceBookUser), Expires = DateTime.MinValue });
@@ -55,9 +55,7 @@ namespace Website.Presentation
         PictureUrl = "/Styles/Images/anonymous.jpg",
         UserName = TxtName.Text
       };
-
       
-
       //Session["UserName"] = TxtName.Text;
       //Session["Radius"] = TxtRadius.Text;
       Session["Latitude"] = Latitude.Value;
