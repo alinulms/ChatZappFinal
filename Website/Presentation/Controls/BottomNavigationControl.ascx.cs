@@ -19,12 +19,12 @@ namespace Website.Presentation.Controls
 
     protected void ChangeRadius(object sender, EventArgs e)
     {
-      Response.Redirect("/");
+      Response.Redirect(ConfigurationManager.AppSettings["StartingPage"]);
     }
 
     public string IsNewDiscussionPage
     {
-      get { return GetPageName().ToLower().Equals("messageboard.aspx") ? "active" : string.Empty; }
+      get { return GetPageName().ToLower().Equals("discussionboard.aspx") ? "active" : string.Empty; }
     }
 
     public string IsMessageBoardPage

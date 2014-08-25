@@ -60,22 +60,6 @@ namespace Website.Presentation.Controls
       }
     }
 
-    //public string UserName
-    //{
-    //  get
-    //  {
-    //    HttpCookie httpCookie = Request.Cookies[Constants.CookieName];
-    //    if (httpCookie != null)
-    //    {
-    //      var userCookie = httpCookie.Value;
-    //      FacebookUser fbUser = new JavaScriptSerializer().Deserialize<FacebookUser>(userCookie);
-    //      return fbUser.UserName;
-    //    }
-    //    Response.Redirect("/");
-    //    return string.Empty;
-    //  }
-    //}
-
     public FacebookUser FacebookUserFromCookie
     {
       get

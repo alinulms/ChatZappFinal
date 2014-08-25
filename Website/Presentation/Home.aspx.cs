@@ -14,6 +14,10 @@ namespace Website.Presentation
     {
       if (Session["UserName"] != null && !string.IsNullOrEmpty(Session["UserName"].ToString()))
         TxtName.Text = Session["UserName"].ToString();
+
+      Session["Latitude"] = Latitude.Value;
+      Session["Longitude"] = Longitude.Value;
+
       base.OnInit(e);
     }
 
@@ -56,11 +60,6 @@ namespace Website.Presentation
         UserName = TxtName.Text
       };
       
-      //Session["UserName"] = TxtName.Text;
-      //Session["Radius"] = TxtRadius.Text;
-      Session["Latitude"] = Latitude.Value;
-      Session["Longitude"] = Longitude.Value;
-
       Response.Cookies.Add(new HttpCookie(Constants.CookieName) { Value = new JavaScriptSerializer().Serialize(fbUser), Expires = DateTime.MinValue });
       Response.Redirect(ConfigurationManager.AppSettings["MessageBoardPage"]);
     }

@@ -30,7 +30,7 @@ namespace Website.Presentation.Controls
       {
         var userCookie = httpCookie.Value;
         FacebookUser fbUser = new JavaScriptSerializer().Deserialize<FacebookUser>(userCookie);
-        UserName.Value = fbUser.UserName;
+        UserName.Value = fbUser.Name;
         UserImageUrl.Value = fbUser.PictureUrl;
       }
       base.OnInit(e);
