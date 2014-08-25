@@ -32,3 +32,10 @@ C:\Users\Alin\Documents\GitHub\Chatzapp\ChatZappFinal\Website\bin\Website.dll
 C:\Users\Alin\Documents\GitHub\Chatzapp\ChatZappFinal\Website\bin\Website.pdb
 C:\Users\Alin\Documents\GitHub\Chatzapp\ChatZappFinal\Website\obj\Debug\Website.dll
 C:\Users\Alin\Documents\GitHub\Chatzapp\ChatZappFinal\Website\obj\Debug\Website.pdb
+C:\Users\ap\Documents\GitHub\ChatZappFinal\Website\bin\Website.dll.config
+C:\Users\ap\Documents\GitHub\ChatZappFinal\Website\bin\Website.dll
+C:\Users\ap\Documents\GitHub\ChatZappFinal\Website\bin\Website.pdb
+C:\Users\ap\Documents\GitHub\ChatZappFinal\Website\bin\Newtonsoft.Json.dll
+C:\Users\ap\Documents\GitHub\ChatZappFinal\Website\obj\Debug\Website.csprojResolveAssemblyReference.cache
+C:\Users\ap\Documents\GitHub\ChatZappFinal\Website\obj\Debug\Website.dll
+C:\Users\ap\Documents\GitHub\ChatZappFinal\Website\obj\Debug\Website.pdb

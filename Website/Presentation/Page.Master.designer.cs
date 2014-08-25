@@ -40,15 +40,6 @@ namespace Website.Presentation {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder TopPlaceholder;
         
         /// <summary>
-        /// SearchControl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Website.Presentation.Controls.SearchControl SearchControl;
-        
-        /// <summary>
         /// ContentPlaceholder control.
         /// </summary>
         /// <remarks>

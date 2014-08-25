@@ -28,8 +28,7 @@
    <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="TopPlaceholder" runat="server">
-                <uc1:SearchControl runat="server" id="SearchControl" />
-            </asp:ContentPlaceHolder>
+             </asp:ContentPlaceHolder>
 
             <asp:ContentPlaceHolder ID="ContentPlaceholder" runat="server">
             </asp:ContentPlaceHolder>
