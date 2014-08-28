@@ -14,10 +14,6 @@ namespace Website.Presentation
     {
       if (Session["UserName"] != null && !string.IsNullOrEmpty(Session["UserName"].ToString()))
         TxtName.Text = Session["UserName"].ToString();
-
-      Session["Latitude"] = Latitude.Value;
-      Session["Longitude"] = Longitude.Value;
-
       base.OnInit(e);
     }
 
@@ -37,6 +33,9 @@ namespace Website.Presentation
       string code = Request.QueryString["code"];
       if (string.IsNullOrEmpty(code)) 
         return;
+
+      Session["Latitude"] = Latitude.Value;
+      Session["Longitude"] = Longitude.Value;
 
       string data = FaceBookConnect.Fetch(code, "me");
       var faceBookUser = new JavaScriptSerializer().Deserialize<FacebookUser>(data);
@@ -59,6 +58,9 @@ namespace Website.Presentation
         PictureUrl = "/Styles/Images/anonymous.jpg",
         UserName = TxtName.Text
       };
+      
+      Session["Latitude"] = Latitude.Value;
+      Session["Longitude"] = Longitude.Value;
       
       Response.Cookies.Add(new HttpCookie(Constants.CookieName) { Value = new JavaScriptSerializer().Serialize(fbUser), Expires = DateTime.MinValue });
       Response.Redirect(ConfigurationManager.AppSettings["MessageBoardPage"]);
