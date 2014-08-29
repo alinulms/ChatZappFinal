@@ -1,8 +1,8 @@
 ﻿using System;
+using Microsoft.AspNet.SignalR;
 
 namespace Website.Presentation
 {
-  using Microsoft.AspNet.SignalR;
   using Model.Factories;
   using Model.Repositories;
 
