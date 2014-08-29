@@ -10,7 +10,7 @@
    <title>ChatZapp</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <script src="../Scripts/jquery-2.1.1.js"></script>
+    <script src="../Scripts/jquery-2.1.1.min.js"></script>
     <script src="../Scripts/jquery.signalR-2.1.1.js"></script>
     <script src="../Scripts/Custom/BrowserDetect.js"></script>
     <script src="../Scripts/Custom/EventHandler.js"></script>
