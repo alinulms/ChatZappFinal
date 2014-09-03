@@ -1,79 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Web;
 using System.Web.UI.WebControls;
 
 namespace Website.Presentation.Controls
 {
   using System.Configuration;
-  using System.Web.Script.Serialization;
   using Model;
+  using Model.Repositories;
 
   public partial class MessageBoardControl : System.Web.UI.UserControl
   {
+    private ChatzappUser _chatzappUser;
+    private Location _location;
+
     protected override void OnInit(EventArgs e)
     {
+      ValidateUser();
+      ValidateLocation();
+
       base.OnInit(e);
       DataBind();
     }
 
+    private void ValidateLocation()
+    {
+      var locationRepository = new LocationRepository(Request);
+      _location = locationRepository.Get();
+
+      if(_location == null)
+        Response.Redirect(ConfigurationManager.AppSettings["StartingPage"]);
+    }
+
+    private void ValidateUser()
+    {
+      var persistedUserRepository = new PersistedUserRepository(Request);
+      _chatzappUser = persistedUserRepository.GetUser();
+
+      if (_chatzappUser == null)
+        Response.Redirect(ConfigurationManager.AppSettings["StartingPage"]);
+    }
+
     protected IEnumerable<Message> GetMessageBoardDiscussions()
     {
-      var allMsg = Model.Repositories.MessageRepository.GetAllInRadius(Latitude, Longitude, Radius);
+      var allMsg = MessageRepository.GetAllInRadius(_location.Latitude, _location.Longitude, _chatzappUser.ChattingDistance);
       return allMsg;
-    }
-
-    public double Longitude
-    {
-      get
-      {
-        if (Session["Longitude"] != null && Session["Longitude"].ToString() != string.Empty)
-          return Double.Parse(Session["Longitude"].ToString().Replace('.', ','));
-        Response.Redirect("/");
-        return double.NaN;
-      }
-    }
-    public double Latitude
-    {
-      get
-      {
-        if (Session["Latitude"] != null && !string.IsNullOrEmpty(Session["Latitude"].ToString()))
-          return Double.Parse(Session["Latitude"].ToString().Replace('.', ','));
-        Response.Redirect("/");
-        return double.NaN;
-      }
-    }
-
-    public int Radius
-    {
-      get
-      {
-        HttpCookie httpCookie = Request.Cookies[Constants.CookieName];
-        if (httpCookie != null)
-        {
-          var userCookie = httpCookie.Value;
-          FacebookUser fbUser = new JavaScriptSerializer().Deserialize<FacebookUser>(userCookie);
-          return fbUser.ChattingDistance;
-        }
-        Response.Redirect("/");
-        return -1;
-      }
-    }
-
-    public FacebookUser FacebookUserFromCookie
-    {
-      get
-      {
-        HttpCookie httpCookie = Request.Cookies[Constants.CookieName];
-        if (httpCookie != null)
-        {
-          var userCookie = httpCookie.Value;
-          FacebookUser fbUser = new JavaScriptSerializer().Deserialize<FacebookUser>(userCookie);
-          return fbUser;
-        }
-        Response.Redirect("/");
-        return null;
-      }
     }
 
     protected void ShowDiscussion(object sender, EventArgs e)
@@ -83,7 +53,7 @@ namespace Website.Presentation.Controls
 
     protected string GetMessagesInDiscussion(string groupId)
     {
-      return Model.Repositories.MessageRepository.GetNumberOfMessageInDiscussion(groupId);
+      return MessageRepository.GetNumberOfMessageInDiscussion(groupId);
     }
   }
 }

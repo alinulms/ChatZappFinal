@@ -10,7 +10,6 @@ namespace Website.Presentation.Controls
   using Model;
   using Model.Repositories;
 
-
   public partial class DiscussionControl : System.Web.UI.UserControl
   {
     public string GroupId
@@ -25,13 +24,13 @@ namespace Website.Presentation.Controls
 
     protected override void OnInit(EventArgs e)
     {
-      HttpCookie httpCookie = Request.Cookies[Constants.CookieName];
-      if (httpCookie != null)
+      PersistedUserRepository persistedUserRepository = new PersistedUserRepository(Request);
+      var chatzapUser = persistedUserRepository.GetUser();
+      
+      if (chatzapUser!= null)
       {
-        var userCookie = httpCookie.Value;
-        FacebookUser fbUser = new JavaScriptSerializer().Deserialize<FacebookUser>(userCookie);
-        UserName.Value = fbUser.Name;
-        UserImageUrl.Value = fbUser.PictureUrl;
+        UserName.Value = chatzapUser.Name;
+        UserImageUrl.Value = chatzapUser.PictureUrl;
       }
       base.OnInit(e);
       DataBind();

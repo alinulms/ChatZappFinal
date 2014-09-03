@@ -141,10 +141,13 @@
     <Compile Include="Infrastructure\GeoDistanceCalculator.cs" />
     <Compile Include="Infrastructure\MessageFilter.cs" />
     <Compile Include="Infrastructure\MongoDataProvider.cs" />
-    <Compile Include="Model\FacebookUser.cs" />
+    <Compile Include="Model\ChatzappUser.cs" />
     <Compile Include="Model\Factories\MessageFactory.cs" />
+    <Compile Include="Model\Location.cs" />
     <Compile Include="Model\Message.cs" />
+    <Compile Include="Model\Repositories\LocationRepository.cs" />
     <Compile Include="Model\Repositories\MessageRepository.cs" />
+    <Compile Include="Model\Repositories\PersistedUserRepository.cs" />
     <Compile Include="Presentation\Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
