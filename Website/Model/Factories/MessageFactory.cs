@@ -18,7 +18,8 @@ namespace Website.Model.Factories
         Text = text,
         Longitude = longitude,
         Latitude = latitude,
-        Browser = browser
+        Browser = browser,
+        AuthenticationMethod = string.Empty
       };
     }
   }

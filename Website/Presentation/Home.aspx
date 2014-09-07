@@ -9,7 +9,7 @@
                         <h4>What is your name</h4>
                         <asp:TextBox runat="server" ID="TxtName"  />
                         <h4>What is the scan radius? (km)</h4>
-                        <asp:TextBox runat="server" ID="TxtRadius"  TextMode="Number" min="1" />
+                        <asp:TextBox runat="server" ID="TxtRadius" TextMode="Number" min="1" />
                         <br />
                         <p>
                             <asp:LinkButton runat="server" OnClick="SaveNameAndRadius" Text="Start" class="btn btn-primary" role="button"></asp:LinkButton>
@@ -23,7 +23,7 @@
                         <h4>Use Facebook to Login</h4>
                         <asp:Button ID="btnLogin" runat="server" Text="Login with FaceBook" OnClick="Login" />
                         <h4>What is the scan radius? (km)(default 10)</h4>
-                        <asp:TextBox runat="server" ID="TxtRadiusFacebook" TextMode="Number" min="1" />
+                        <asp:TextBox runat="server" ID="TxtRadiusFacebook" TextMode="Number" min="1" ToolTip="10"/>
                     </div>
                 </div>
             </div>

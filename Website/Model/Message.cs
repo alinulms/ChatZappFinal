@@ -4,7 +4,6 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Website.Model
 {
-
   public class Message
   {
     [BsonId]
@@ -17,5 +16,6 @@ namespace Website.Model
     public Double Latitude { get; set; }
     public Double Longitude { get; set; }
     public string Browser { get; set; }
+    public string AuthenticationMethod { get; set; }
   }
 }
