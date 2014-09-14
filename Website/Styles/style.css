@@ -1,0 +1,36 @@
+﻿html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}strong{font-weight:bold;}i{font-style:italic;}a{text-decoration:none;}button{outline:none;}
+body { font-family: 'open_sans', Helvetica, Arial, sans-serif; font-size:16px; background-image:url(Images/city.png); background-repeat:no-repeat; background-position:50%; background-size:cover; background-attachment:fixed; }
+
+.headline-small { font-size:16px; padding-bottom:5px; }
+.headline-medium { font-size:26px; margin-bottom:20px; }
+
+.white { color:#fff; text-shadow: 1px 2px 3px #666; }
+/* Simple Grid */
+.box-wide { width:940px; margin-left:auto; margin-right:auto; }
+.box-full { width:100%; float:left; -moz-box-sizing:border-box; box-sizing:border-box; }
+.box-half { width:50%; float:left; -moz-box-sizing:border-box; box-sizing:border-box; }
+.box-third { width:33.333%; float:left; -moz-box-sizing:border-box; box-sizing:border-box; }
+.box-two-thirds { width:66.66%; float:left; -moz-box-sizing:border-box; box-sizing:border-box; }
+.box-quarter { width:25%; float:left; -moz-box-sizing:border-box; box-sizing:border-box; }
+.column-grid { width:102.128%; margin-left:-1.064%; }
+    .column-grid > .box-four { width:22.918%; margin-left:1.041%; margin-right:1.041%; }
+    .column-grid .box-third { width:31.25%; margin-left:1.041%; margin-right:1.041%; }
+    .column-grid > .box-two-thirds { width:64.584%; margin-left:1.041%; margin-right:1.041%; }
+    .column-grid > .box-full { width:97.918%; margin-left:1.041%; margin-right:1.041%; }
+    .column-grid > .box-half { width:47.918%; margin-left:1.041%; margin-right:1.041%; position:relative; }
+    .column-grid > .box-quarter { width:22.92%; margin-left:1.041%; margin-right:1.041%; }
+	.column-grid > .box-fifth { width:17.92%; margin-left:1.041%; margin-right:1.041%; float:left; -moz-box-sizing:border-box; box-sizing:border-box; }
+
+.panel-box { background-color:rgba(248,248,248,.5); border-radius:3px; margin-bottom:20px; padding:20px; -moz-box-sizing:border-box; box-sizing:border-box; }
+
+.global-input { width:100%; line-height:26px; font-size:18px; border-radius:3px; margin-bottom:10px; border:1px solid #5c5c5c; padding:5px; -moz-box-sizing:border-box; box-sizing:border-box; }
+.global-button { width:100%; text-align:center; background-color:#3071AF; color:#fafafa; border-radius:3px; font-size:16px; line-height:40px; display:block; }
+
+.welcome-text { font-size:18px; line-height:24px; }
+.login-page-box { margin-top:25%; }
+.fb-login { margin-bottom:10px; }
+
+.message-container { margin-top:-5px; }
+.discussions-list-viewport { height:850px; margin-bottom:0; overflow-y:auto; overflow-x:hidden; }
+.message-input { width:90%; line-height:40px; font-size:18px; border-radius:0 0 0 3px; margin-bottom:10px; border:1px solid #5c5c5c; padding:5px; margin-right:-.4%; -moz-box-sizing:border-box; box-sizing:border-box; }
+.send-message-button { width:10%; font-size:18px; padding:15px 0; text-align:center; background-color:#3071AF; color:#fafafa; border-radius:0 0 3px 0; border:none; margin-right:-.5%; }
