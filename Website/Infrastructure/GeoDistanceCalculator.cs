@@ -27,18 +27,6 @@ namespace Website.Infrastructure
       double dist = RADIUS * d;
 
       return dist;
-
-      //var dLongitude = eLongitudeRadians - sLongitudeRadians;
-      //var dLatitude = eLatitudeRadians - sLatitudeRadians;
-
-      //var result1 = Math.Pow(Math.Sin(dLatitude / 2.0), 2.0) +
-      //              Math.Cos(sLatitudeRadians) * Math.Cos(eLatitudeRadians) *
-      //              Math.Pow(Math.Sin(dLongitude / 2.0), 2.0);
-
-      //// Using 3956 as the number of miles around the earth
-      //var result2 = RADIUS * Math.Atan2(Math.Sqrt(result1), Math.Sqrt(1.0 - result1));
-
-      //return result2;
     }
   }
 }

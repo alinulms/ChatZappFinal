@@ -363,7 +363,7 @@ jQuery.ajax = function( url, options ) {
 			// Headers (they are sent all at once)
 			requestHeaders = {},
 			requestHeadersNames = {},
-			// Response headers
+			// GoogleLocationApiResponse headers
 			responseHeadersString,
 			responseHeaders,
 			// transport

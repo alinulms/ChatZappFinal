@@ -14,10 +14,13 @@
                           <%#((Message)Container.DataItem).Text %>
                         </p>
                 </asp:LinkButton>
-                <em>oprettet:</em>
                 <%#((Message)Container.DataItem).SendTime.ToString("dd-MM-yyyy  HH:mm") %>
-                <span>(<%#((Message)Container.DataItem).Latitude %> | <%#((Message)Container.DataItem).Longitude %>)
-                </span>
+                <em>
+                    <%#GetElapsedTime((Message)Container.DataItem) %>
+                </em>
+                <em>
+                  <%#Resources.N.Nearby %>  <%#((Message)Container.DataItem).NearbyPlace %>
+                </em>            
             </li>
         </ItemTemplate>
         <FooterTemplate>
