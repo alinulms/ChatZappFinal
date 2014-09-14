@@ -15,8 +15,9 @@ namespace Website.Presentation
     {
       AutoFillUserNameTextBox();
       base.OnInit(e);
+      DataBind();
     }
-
+    
     private void AutoFillUserNameTextBox()
     {
       var persistedUserRepositor = new PersistedUserRepository(Request);

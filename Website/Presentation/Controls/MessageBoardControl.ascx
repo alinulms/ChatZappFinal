@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MessageBoardControl.ascx.cs" Inherits="Website.Presentation.Controls.MessageBoardControl" %>
 <%@ Import Namespace="Website.Model" %>
+<%@ Import Namespace="Website.Resources" %>
 <div class="viewport">
     <asp:Repeater runat="server" ID="Discussions" DataSource="<%#GetMessageBoardDiscussions() %>">
         <HeaderTemplate>
@@ -14,10 +15,14 @@
                           <%#((Message)Container.DataItem).Text %>
                         </p>
                 </asp:LinkButton>
-                <em>oprettet:</em>
+                <em><%#Resources.C.CreatedBy %></em>
                 <%#((Message)Container.DataItem).SendTime.ToString("dd-MM-yyyy  HH:mm") %>
-                <span>(<%#((Message)Container.DataItem).Latitude %> | <%#((Message)Container.DataItem).Longitude %>)
-                </span>
+                <em>
+                    <%#GetElapsedTime((Message)Container.DataItem) %>
+                </em>
+                <em>
+                  <%#Resources.N.Nearby %>  <%#((Message)Container.DataItem).NearbyPlace %>
+                </em>            
             </li>
         </ItemTemplate>
         <FooterTemplate>

@@ -4,7 +4,9 @@ using System.Web.UI.WebControls;
 
 namespace Website.Presentation.Controls
 {
+  using System.ComponentModel.DataAnnotations;
   using System.Configuration;
+  using System.Globalization;
   using Model;
   using Model.Repositories;
 
@@ -12,7 +14,7 @@ namespace Website.Presentation.Controls
   {
     private ChatzappUser _chatzappUser;
     private Location _location;
-
+    
     protected override void OnInit(EventArgs e)
     {
       ValidateUser();
@@ -54,6 +56,14 @@ namespace Website.Presentation.Controls
     protected string GetMessagesInDiscussion(string groupId)
     {
       return MessageRepository.GetNumberOfMessageInDiscussion(groupId);
+    }
+
+    protected string GetElapsedTime(Message message)
+    {
+      var ts = DateTime.Now.Subtract(message.SendTime);
+      var str = string.Concat(ts.Hours.ToString(CultureInfo.InvariantCulture),":", ts.Minutes.ToString(CultureInfo.InvariantCulture));
+
+      return string.Format(Resources.Resources.P.PostedXMinAgo, str);
     }
   }
 }

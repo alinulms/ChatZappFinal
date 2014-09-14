@@ -15,7 +15,9 @@ namespace Website.Model
     public DateTime SendTime { get; set; }
     public Double Latitude { get; set; }
     public Double Longitude { get; set; }
+    public string PostTime { get; set; }
     public string Browser { get; set; }
     public string AuthenticationMethod { get; set; }
+    public string NearbyPlace { get; set; }
   }
 }

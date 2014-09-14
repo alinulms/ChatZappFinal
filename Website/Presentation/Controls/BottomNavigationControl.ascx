@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BottomNavigationControl.ascx.cs" Inherits="Website.Presentation.Controls.BottomNavigationControl" %>
+<%@ Import Namespace="Website.Resources" %>
 <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -14,13 +14,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="<%# IsNewDiscussionPage %>">
-                    <asp:LinkButton runat="server" OnClick="NewDiscussion" Text="New discussion" />
+                    <asp:LinkButton runat="server" OnClick="NewDiscussion" Text="<%#Resources.N.NewDiscussion %>" />
                 </li>
                 <li class="<%#IsMessageBoardPage %>">
-                    <asp:LinkButton runat="server" OnClick="ShowAllDiscussion" Text="List Discussions" />
+                    <asp:LinkButton runat="server" OnClick="ShowAllDiscussion" Text="<%#Resources.L.ListDiscussions %>" />
                 </li>
                 <li>
-                    <asp:LinkButton runat="server" OnClick="ChangeRadius" Text="Change radius" />
+                    <asp:LinkButton runat="server" OnClick="ChangeRadius" Text="<%# Resources.C.ChangeRadius %>" />
                 </li>
             </ul>
         </div>

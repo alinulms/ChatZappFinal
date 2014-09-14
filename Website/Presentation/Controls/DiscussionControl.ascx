@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DiscussionControl.ascx.cs" Inherits="Website.Presentation.Controls.DiscussionControl" %>
 <%@ Import Namespace="Website.Model" %>
+<%@ Import Namespace="Website.Resources" %>
 <asp:Repeater runat="server" ID="DiscussionList" DataSource="<%#GetMessages() %>">
     <HeaderTemplate>
         <ul id="message_<%#GroupId %>" class="list-group">
@@ -21,7 +22,7 @@
                 <input type="text" class="form-control" id="message">
                 <span class="input-group-btn">
                     <%--<input type="button" id="sendmessage" value="Send" class="btn btn-default" />--%>
-                    <button id="sendmessage" value="Send" class="btn btn-default" type="button">Send</button>
+                    <button id="sendmessage" value="Send" class="btn btn-default" type="button"><%# Resources.S.Send %></button>
                 </span>
             </div>
         </div>

@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="Page.Master" CodeBehind="Home.aspx.cs" Inherits="Website.Presentation.Home" %>
+<%@ Import Namespace="Website.Resources" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceholder" runat="server">
 
     <asp:Panel runat="server" CssClass="startupControllers">
@@ -6,13 +7,13 @@
             <div class="col-sm-6 col-md-2">
                 <div class="thumbnail">
                     <div class="caption">
-                        <h4>What is your name</h4>
+                        <h4><%#Resources.W.WhatIsYourName %></h4>
                         <asp:TextBox runat="server" ID="TxtName"  />
-                        <h4>What is the scan radius? (km)</h4>
-                        <asp:TextBox runat="server" ID="TxtRadius" TextMode="Number" min="1" />
+                        <h4><%#Resources.W.WhatIsTheScanRadius %></h4>
+                        <asp:TextBox runat="server" ID="TxtRadius" TextMode="Number" min="1" Text="10"/>
                         <br />
                         <p>
-                            <asp:LinkButton runat="server" OnClick="SaveNameAndRadius" Text="Start" class="btn btn-primary" role="button"></asp:LinkButton>
+                            <asp:LinkButton runat="server" OnClick="SaveNameAndRadius" Text="<%#Resources.S.Start %>" class="btn btn-primary" role="button"></asp:LinkButton>
                         </p>
                     </div>
                 </div>
@@ -20,10 +21,9 @@
             <div class="col-sm-6 col-md-2">
                 <div class="thumbnail">
                     <div class="caption">
-                        <h4>Use Facebook to Login</h4>
-                        <asp:Button ID="btnLogin" runat="server" Text="Login with FaceBook" OnClick="Login" />
-                        <h4>What is the scan radius? (km)(default 10)</h4>
-                        <asp:TextBox runat="server" ID="TxtRadiusFacebook" TextMode="Number" min="1" ToolTip="10"/>
+                        <asp:Button ID="btnLogin" runat="server" Text="<%#Resources.F.FacebookLogin %>" OnClick="Login" />
+                        <h4><%#Resources.W.WhatIsTheScanRadius %></h4>
+                        <asp:TextBox runat="server" ID="TxtRadiusFacebook" TextMode="Number" min="1" Text="10"/>
                     </div>
                 </div>
             </div>
