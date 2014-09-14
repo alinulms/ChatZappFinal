@@ -128,9 +128,9 @@
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\Images\anonymous.jpg" />
     <Content Include="Styles\Images\city.png" />
-    <Content Include="Styles\Main.css" />
     <Content Include="Styles\navbar.css" />
     <Content Include="Styles\standard.css" />
+    <Content Include="Styles\style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

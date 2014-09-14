@@ -14,10 +14,9 @@
     <script src="../Scripts/jquery.signalR-2.1.1.js"></script>
     <script src="../Scripts/Custom/BrowserDetect.js"></script>
     <script src="../Scripts/Custom/EventHandler.js"></script>
-    <link href="../Styles/Main.css" rel="stylesheet" />
-    <link href="../Styles/bootstrap.min.css" rel="stylesheet" />
-    <link href="../Styles/standard.css" rel="stylesheet" />
-	<meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="../Styles/style.css" rel="stylesheet" />
+	<link href="../Styles/fonts/fonts.css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

@@ -1,29 +1,26 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="DiscussionControl.ascx.cs" Inherits="Website.Presentation.Controls.DiscussionControl" %>
 <%@ Import Namespace="Website.Model" %>
-<asp:Repeater runat="server" ID="DiscussionList" DataSource="<%#GetMessages() %>">
-    <HeaderTemplate>
-        <ul id="message_<%#GroupId %>" class="list-group">
-    </HeaderTemplate>
-    <ItemTemplate>
-        <li class="list-group-item">
-            <asp:Image ID="ProfileImage" runat="server" Width="50" Height="50" ImageUrl="<%#((Message)Container.DataItem).UserImageUrl %>" /> &nbsp; <%# ((Message)Container.DataItem).Author %> - <%# ((Message)Container.DataItem).Text %>
-        </li>
-    </ItemTemplate>
-    <FooterTemplate>
-        </ul>
-    </FooterTemplate>
-</asp:Repeater>
+<div class="box-wide panel-box discussions-list-viewport">
+	<asp:Repeater runat="server" ID="DiscussionList" DataSource="<%#GetMessages() %>">
+		<HeaderTemplate>
+			<ul id="message_<%#GroupId %>" class="list-group">
+		</HeaderTemplate>
+		<ItemTemplate>
+			<li class="list-group-item">
+				<asp:Image ID="ProfileImage" runat="server" Width="50" Height="50" ImageUrl="<%#((Message)Container.DataItem).UserImageUrl %>" /> &nbsp; <%# ((Message)Container.DataItem).Author %> - <%# ((Message)Container.DataItem).Text %>
+			</li>
+		</ItemTemplate>
+		<FooterTemplate>
+			</ul>
+		</FooterTemplate>
+	</asp:Repeater>
+</div>
 
-<div id="discussion_container">
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="input-group">
-                <input type="text" class="form-control" id="message">
-                <span class="input-group-btn">
-                    <%--<input type="button" id="sendmessage" value="Send" class="btn btn-default" />--%>
-                    <button id="sendmessage" value="Send" class="btn btn-default" type="button">Send</button>
-                </span>
-            </div>
+<div class="message-container">
+    <div class="box-wide">
+        <div class="input-group">
+            <input type="text" class="form-control message-input" id="message" placeholder="Your message">
+            <button id="sendmessage" value="Send" class="send-message-button" type="button">Send</button>
         </div>
     </div>
     <input type="hidden" id="displayname" />
