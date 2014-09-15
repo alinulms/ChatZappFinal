@@ -1,5 +1,4 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="BottomNavigationControl.ascx.cs" Inherits="Website.Presentation.Controls.BottomNavigationControl" %>
-<%@ Import Namespace="Website.Resources" %>
 <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -8,13 +7,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="<%# IsNewDiscussionPage %>">
-                    <asp:LinkButton runat="server" OnClick="NewDiscussion" Text="<%#Resources.N.NewDiscussion %>" />
+                    <asp:LinkButton runat="server" OnClick="NewDiscussion" Text="<%#Website.Resources.Navigation.NewDiscussion %>" />
                 </li>
                 <li class="<%#IsMessageBoardPage %>">
-                    <asp:LinkButton runat="server" OnClick="ShowAllDiscussion" Text="<%#Resources.L.ListDiscussions %>" />
+                    <asp:LinkButton runat="server" OnClick="ShowAllDiscussion" Text="<%#Website.Resources.Navigation.ListDiscussions %>" />
                 </li>
                 <li>
-                    <asp:LinkButton runat="server" OnClick="ChangeRadius" Text="<%# Resources.C.ChangeRadius %>" />
+                    <asp:LinkButton runat="server" OnClick="ChangeRadius" Text="<%# Website.Resources.Navigation.ChangeRadius %>" />
                 </li>
             </ul>
         </div>
