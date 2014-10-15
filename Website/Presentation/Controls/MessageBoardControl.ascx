@@ -20,7 +20,7 @@
                     <%#GetElapsedTime((Message)Container.DataItem) %>
                 </em>
                 <em>
-                  <%#Website.Resources.MessageBoard.Nearby %>  <%#((Message)Container.DataItem).NearbyPlace %>
+                  <%#Website.Resources.N.Nearby %>  <%#((Message)Container.DataItem).NearbyPlace %>
                 </em>            
             </li>
         </ItemTemplate>

@@ -7,13 +7,13 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="<%# IsNewDiscussionPage %>">
-                    <asp:LinkButton runat="server" OnClick="NewDiscussion" Text="<%#Website.Resources.Navigation.NewDiscussion %>" />
+                    <asp:LinkButton runat="server" OnClick="NewDiscussion" Text="<%#Website.Resources.N.NewDiscussion %>" />
                 </li>
                 <li class="<%#IsMessageBoardPage %>">
-                    <asp:LinkButton runat="server" OnClick="ShowAllDiscussion" Text="<%#Website.Resources.Navigation.ListDiscussions %>" />
+                    <asp:LinkButton runat="server" OnClick="ShowAllDiscussion" Text="<%#Website.Resources.L.ListDiscussions %>" />
                 </li>
                 <li>
-                    <asp:LinkButton runat="server" OnClick="ChangeRadius" Text="<%# Website.Resources.Navigation.ChangeRadius %>" />
+                    <asp:LinkButton runat="server" OnClick="ChangeRadius" Text="<%# Website.Resources.C.ChangeRadius %>" />
                 </li>
             </ul>
         </div>
