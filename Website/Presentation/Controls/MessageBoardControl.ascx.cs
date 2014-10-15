@@ -63,7 +63,7 @@ namespace Website.Presentation.Controls
       var ts = DateTime.Now.Subtract(message.SendTime);
       var str = string.Concat(ts.Hours.ToString(CultureInfo.InvariantCulture),":", ts.Minutes.ToString(CultureInfo.InvariantCulture));
 
-      return string.Format(Resources.MessageBoard.PostedXMinAgo, str);
+      return string.Format("Posted {0} minutes ago", str);
     }
   }
 }
