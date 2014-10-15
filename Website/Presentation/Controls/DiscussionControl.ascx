@@ -19,8 +19,8 @@
 <div class="message-container">
     <div class="box-wide">
         <div class="input-group">
-            <input type="text" class="form-control message-input" id="message" placeholder="Your message">
-            <button id="sendmessage" value="Send" class="send-message-button" type="button">Send</button>
+            <input type="text" class="form-control message-input" id="message" placeholder="<%#Website.Resources.DiscussionBoard.YourMessage %>">
+            <button id="sendmessage" value="Send" class="send-message-button" type="button"><%#Website.Resources.DiscussionBoard.Send %></button>
         </div>
     </div>
     <input type="hidden" id="displayname" />

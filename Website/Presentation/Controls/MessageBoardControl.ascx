@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MessageBoardControl.ascx.cs" Inherits="Website.Presentation.Controls.MessageBoardControl" %>
 <%@ Import Namespace="Website.Model" %>
-<%@ Import Namespace="Website.Resources" %>
+
 <div class="box-wide panel-box discussions-list-viewport">
     <asp:Repeater runat="server" ID="Discussions" DataSource="<%#GetMessageBoardDiscussions() %>">
         <HeaderTemplate>
@@ -20,7 +20,7 @@
                     <%#GetElapsedTime((Message)Container.DataItem) %>
                 </em>
                 <em>
-                  <%#Resources.N.Nearby %>  <%#((Message)Container.DataItem).NearbyPlace %>
+                  <%#Website.Resources.MessageBoard.Nearby %>  <%#((Message)Container.DataItem).NearbyPlace %>
                 </em>            
             </li>
         </ItemTemplate>
