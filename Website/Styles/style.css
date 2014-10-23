@@ -28,6 +28,25 @@ body { font-family: 'open_sans', Helvetica, Arial, sans-serif; font-size:16px; b
 
 .panel-box { background-color:rgba(248,248,248,.5); border-radius:3px; margin-bottom:20px; padding:20px; -moz-box-sizing:border-box; box-sizing:border-box; }
 
+.navbar { width:100%; background-color:#fff; margin-top:10px; }
+.navbar-header { display:inline-block; line-height:60px; padding:0 15px; border-right:1px solid #666; float:left; }
+.navbar-collapse { overflow:hidden; }
+.navbar-collapse li { display:inline-block; border-right:1px solid #666; float:left; }
+.navbar-collapse li a { line-height:60px; padding:0 10px; display:block; color:#2f2f2f; }
+	@media (max-width: 640px) {
+	.navbar-header { display:none; }
+	.navbar-collapse li { width:33.33%; -moz-box-sizing:border-box; box-sizing:border-box; }
+	}
+
+.list-group { background-color:rgba(0,0,0,.9); border-radius:3px; overflow:hidden; }
+.list-group > li { color:#fff; padding:6px; overflow:hidden; border-top:1px solid #fff; }
+.list-group > li:first-child { border-top:none; }
+.list-group > li > img { width:60px; margin-right:10px; float:left; }
+
+.badge { float:right; line-height:60px; color:#fff; }
+.name-and-message-link { color:#fff; font-size:16px; padding-bottom:24px; display:block; }
+.message-details { font-size:13px; }
+
 .global-input { width:100%; line-height:26px; font-size:18px; border-radius:3px; margin-bottom:10px; border:1px solid #5c5c5c; padding:5px; -moz-box-sizing:border-box; box-sizing:border-box; }
 .global-button { width:100%; text-align:center; background-color:#3071AF; color:#fafafa; border-radius:3px; font-size:16px; line-height:40px; display:block; }
 
@@ -36,6 +55,6 @@ body { font-family: 'open_sans', Helvetica, Arial, sans-serif; font-size:16px; b
 .fb-login { margin-bottom:10px; }
 
 .message-container { margin-top:-5px; }
-.discussions-list-viewport { height:850px; margin-bottom:0; overflow-y:auto; overflow-x:hidden; }
+.discussions-list-viewport { height:850px; margin-top:10px; margin-bottom:0; overflow-y:auto; overflow-x:hidden; }
 .message-input { width:90%; line-height:40px; font-size:18px; border-radius:0 0 0 3px; margin-bottom:10px; border:1px solid #5c5c5c; padding:5px; margin-right:-.4%; -moz-box-sizing:border-box; box-sizing:border-box; }
 .send-message-button { width:10%; font-size:18px; padding:15px 0; text-align:center; background-color:#3071AF; color:#fafafa; border-radius:0 0 3px 0; border:none; margin-right:-.5%; }

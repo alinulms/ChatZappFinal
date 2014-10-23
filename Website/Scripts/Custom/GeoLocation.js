@@ -10,7 +10,7 @@
 
         if ($('#discussionId').val() == discussionId) {
             $('#message_' + discussionId).append('<li class="list-group-item">'+'<img src="'+encodedImageUrl+'">'+'<strong>' + encodedName
-              + '</strong>:&nbsp;&nbsp;' + encodedMsg + '</li>');
+              + ':</strong><br/>' + encodedMsg + '</li>');
         }
     };
 
