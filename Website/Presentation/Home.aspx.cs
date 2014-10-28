@@ -51,7 +51,7 @@ namespace Website.Presentation
 
       btnLogin.Enabled = false;
       Response.Cookies.Add(new HttpCookie(Constants.ChatzapCookie) { Value = new JavaScriptSerializer().Serialize(faceBookUser), Expires = DateTime.MinValue });
-      Response.Redirect(ConfigurationManager.AppSettings["StartingPage"]);
+      Response.Redirect(ConfigurationManager.AppSettings["MessageBoardPage"]);
     }
 
     protected void SaveNameAndRadius(object sender, EventArgs e)
