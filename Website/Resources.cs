@@ -53,7 +53,7 @@
 
     public struct W
     {
-      public const string WelcomeHeadline = "Welcome to chatzapp";
+      public const string WelcomeHeadline = "Welcome to Chatzapp";
       public const string WhatIsYourName = "What is your name ?";
       public const string WhatIsTheScanRadius = "What is the selected scan radius ?";
     }
