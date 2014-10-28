@@ -23,6 +23,8 @@
     {
       string urlRequest = BuildGooglePlacesUrl();
       GoogleLocationApiResponse response = MakeRequest(urlRequest);
+      if (response.status.ToLower().Equals("invalid_request"))
+        return string.Empty;
       return response.results.FirstOrDefault().name;
     }
 
