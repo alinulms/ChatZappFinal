@@ -14,6 +14,8 @@
     <script src="../Scripts/jquery.signalR-2.1.1.js"></script>
     <script src="../Scripts/Custom/BrowserDetect.js"></script>
     <script src="../Scripts/Custom/EventHandler.js"></script>
+    <script type="text/javascript" src="//chatzapp.apphb.com/-/fxm/web/"></script>
+
     <link href="../Styles/style.css" rel="stylesheet" />
 	<link href="../Styles/fonts/fonts.css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, user-scalable=no" />
