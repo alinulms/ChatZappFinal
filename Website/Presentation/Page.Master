@@ -52,6 +52,5 @@
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/Custom/GeoLocation.js"></script>
     <script src="/signalr/hubs"></script>	
-	<script type="text/javascript" src="//http://localhost.chatzapp.apphb.com/-/fxm/web/"></script> 
 </body>
 </html>
