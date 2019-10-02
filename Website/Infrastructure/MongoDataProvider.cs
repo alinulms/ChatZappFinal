@@ -10,9 +10,9 @@ namespace Website.Infrastructure
   {
     public static IMongoDatabase Get()
     {
-      const string connectionString = "mongodb://alin:alin@paulo.mongohq.com:10041/Solr";
+      const string connectionString = "mongodb://chatzapp:chatzappuser1@ds229258.mlab.com:29258/chatzapp";
       MongoClient client = new MongoClient(connectionString);
-      return client.GetDatabase("Solr");
+      return client.GetDatabase("chatzapp");
       //var server = client.Cluster.SelectServer(new RandomServerSelector(), CancellationToken.None);
       //if (server == null)
       //{
