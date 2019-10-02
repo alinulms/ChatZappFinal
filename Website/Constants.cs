@@ -11,5 +11,5 @@
       public static string Latitude = "Latitude";
       public static string Longitude = "Longitude";
     }
-  }
+  } 
 }
