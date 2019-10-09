@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     getLocation();
 
-    var chat = $.connection.chatHub;
+    var chat = $.connection.hub;
 
     chat.client.broadcastMessage = function (name, imageUrl, message, discussionId) {
         var encodedName = $('<div />').text(name).html();
